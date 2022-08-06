@@ -1,0 +1,35 @@
+.details{
+    background-color: #fff;
+    width: calc(50% - 35px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px !important;
+    min-width: 300px;
+    flex-grow: 1;
+    transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.details:hover{
+    opacity: 0.97;
+}
+.details h5,
+.details h6{
+    font-weight: 500;
+}
+.details.income h5,
+.details.income h6{
+    color: #1976d2 !important;
+}
+.details.expense h5,
+.details.expense h6{
+    color:rgb(209, 75, 75) !important;
+}
+.details canvas {
+    max-height: 300px !important;
+}
+.details p {
+    align-self: center;
+    color:rgb(209, 75, 75);
+    font-weight: 500;
+}

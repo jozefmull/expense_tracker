@@ -1,0 +1,14 @@
+.form{
+    margin-top: 0px !important;
+    padding: 0px 10px !important;
+}
+
+.button{
+    border-radius: 0px;
+    margin-top: 10px !important;
+}
+.form input,
+.form label{
+    font-weight: 500 !important;
+    color: rgba(0, 0, 0, 0.6);
+}

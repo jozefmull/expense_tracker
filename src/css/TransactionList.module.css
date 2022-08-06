@@ -1,0 +1,63 @@
+.list{
+    max-height: 165px;
+    height: 165px;
+    overflow-y: scroll;
+}
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+.list::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: #1976d2 !important;;
+  outline: 1px solid slategrey;
+}
+.avatarIncome{
+    background:  #1976d2 !important;
+    transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.avatarExpense{
+    background: rgb(209, 75, 75) !important;
+    transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.delete_btn{
+    transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.delete_btn > svg{
+    fill: rgb(209, 75, 75) !important;
+    transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.delete_btn:hover{
+    background-color: rgb(209, 75, 75) !important;
+}
+.delete_btn:hover > svg{
+    fill: #fff !important;
+}
+.transaction_item{
+    padding:4px 10px !important; 
+}
+.transaction_item:hover .avatarIncome,
+.transaction_item:hover .avatarExpense{
+    transform: rotateY(180deg);
+}
+.transaction_item.income span{
+    color: #1976d2;
+    font-weight: 500 !important;
+    line-height: 1;
+}
+.transaction_item.expense span{
+    color:  rgb(209, 75, 75) ;
+    font-weight: 500 !important;
+    line-height: 1;
+}
+.transaction_item.income p,
+.transaction_item.expense p{
+    font-weight: 500;
+}
+.add_transactions_message{
+    text-align: center;
+    font-weight: 500;
+    color:rgb(209, 75, 75)
+
+}
