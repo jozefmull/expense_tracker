@@ -10,9 +10,6 @@
     flex-grow: 1;
     transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.details:hover{
-    opacity: 0.97;
-}
 .details h5,
 .details h6{
     font-weight: 500;

@@ -5,7 +5,7 @@ import {v4 as uuidv4} from 'uuid'
 import {GlobalContext} from '../context/GlobalState'
 import {incomeCategories, expenseCategories} from '../constants/categories'
 
-import ArrowDropDownCircleOutlinedIcon from '@mui/icons-material/ArrowDropDownCircleOutlined';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import formatDate from '../utils/formatDate'
 
 import styles from '../css/Form.module.css'
@@ -14,7 +14,7 @@ let initialState = {
     amount: '',
     category:'',
     type:'',
-    date: formatDate(new Date())
+    date: formatDate(new Date()),
 }
 
 const Form = () => {
@@ -79,12 +79,12 @@ const Form = () => {
                 label="Date" 
                 fullWidth 
                 value={formData.date} 
-                onChange={(e) => setformData({...formData, date: formatDate(e.target.value)})}
+                onChange={(e) => setformData({...formData, dateString: formatDate(e.target.value)})}
                 required
                 />
             </Grid>
             <Grid item xs={12} align='center'>
-                <Button endIcon={<ArrowDropDownCircleOutlinedIcon />} type='submit' className={styles.button} color="primary" variant="contained" size="medium">Add Transaction</Button>
+                <Button endIcon={<KeyboardArrowDownIcon />} type='submit' className={styles.button} color="primary" variant="contained" size="medium">Add Transaction</Button>
             </Grid>
         </Grid>
     </form>
