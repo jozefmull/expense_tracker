@@ -1,45 +1,47 @@
-// import React
-// // , {useContext}
-//  from 'react'
-// import {Typography, Box} from '@mui/material'
-// // import {Bar} from 'react-chartjs-2'
-// // import useTransactions from '../useTransactions'
-// // import {GlobalContext} from '../context/GlobalState'
+import React, {useContext, useState, useEffect} from 'react'
+import {Typography, Box} from '@mui/material'
+import {Bar} from 'react-chartjs-2'
+import {GlobalContext} from '../context/GlobalState'
 
-// // import {Chart, registerables } from 'chart.js'
+import styles from '../css/CapitalGains.module.css'
 
-// import styles from '../css/CapitalGains.module.css'
+const CapitalGains = () => {
+    const {transactions} = useContext(GlobalContext)
 
-// const CapitalGains = ({title}) => {
-//     // const {total, chartData} = useTransactions(title)
-//     // const {transactions} = useContext(GlobalContext)
+    const Options = {
+        legend: {
+        display: "true",
+        position: "top",
+        maintainAspectRatio: false 
+        }
+    }
+    
+    const chartData = {
+        labels:[...new Set(transactions.map((c) => c.date))],
+        datasets:[
+            {
+            label: 'Income',
+            data: transactions.filter((t) => t.type === 'Income').map((t) => t.amount),
+            backgroundColor: '#14915f'
+            },
+            {
+            label: 'Expense',
+            data: transactions.filter((t) => t.type === 'Expense').map((t) => t.amount),
+            backgroundColor: '#d14b4b'
+            }],
+        maintainAspectRatio: true,
+        responsive: true,
+    }
 
-// //   Chart.register(...registerables )
+  return (
+    <Box className={styles.cap_gains}>
+        <Typography variant="h5">Capital gains</Typography>
+        {transactions && transactions.length !== 0 ? (
+            
+          <Bar data={chartData} options={Options} height={"100%"}/> 
+         ) : <p>No data</p>} 
+    </Box>
+  )
+}
 
-//     // const Options = {
-//     //     legend: {
-//     //     display: "true",
-//     //     position: "top",
-//     //     maintainAspectRatio: false 
-//     //     },
-//     //     scales: {
-//     //         x: {
-//     //           stacked: true,
-//     //         },
-//     //         y: {
-//     //           stacked: true,
-//     //         },
-//     //     }
-//     // }
-
-//   return (
-//     <Box className={styles.cap_gains}>
-//         <Typography variant="h5">Capital gains</Typography>
-//         {/* {total !== 0 ? (
-//             <Bar data={chartDataSecond} options={Options} height={"100%"}/>
-//         ) : <p>No data</p>} */}
-//     </Box>
-//   )
-// }
-
-// export default CapitalGains
+export default CapitalGains

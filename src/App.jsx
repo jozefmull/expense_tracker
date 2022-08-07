@@ -1,5 +1,6 @@
 import Main from './components/Main'
 import Details from './components/Details'
+import CapitalGains from './components/CapitalGains'
 
 import {Box} from '@mui/material'
 
@@ -21,8 +22,9 @@ function App() {
               </Box>
             </Box>
           </Box>
-          {/* <Box className={styles.cap_gains_box}>
-          </Box> */}
+          <Box className={styles.cap_gains_box}>
+            <CapitalGains/>
+          </Box>
         </Box>
       </div>
   );

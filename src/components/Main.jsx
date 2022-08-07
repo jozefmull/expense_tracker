@@ -2,6 +2,9 @@ import React,{useContext, useState, useEffect} from 'react'
 import {Typography, Grid, Box} from '@mui/material'
 import {GlobalContext} from '../context/GlobalState'
 
+import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
+import EuroOutlinedIcon from '@mui/icons-material/EuroOutlined';
+
 import {numberWithCommas} from '../utils/formatNumber'
 
 import Form from './Form'
@@ -24,8 +27,8 @@ const Main = () => {
     
   return (
     <Box className={styles.main}>
-        <Typography align="left" variant="h5">Total Balance: <span style={{color: incomeTotal - expenseTotal < 0 ? 'rgb(209, 75, 75)' : '#247a54'}}>
-          {numberWithCommas(incomeTotal - expenseTotal)} €</span>
+        <Typography align="left" variant="h5"><AccountBalanceWalletOutlinedIcon fontSize='large'/>Total Balance: <span style={{color: incomeTotal - expenseTotal < 0 ? 'rgb(209, 75, 75)' : ''}}>
+          {numberWithCommas(incomeTotal - expenseTotal)} <EuroOutlinedIcon/></span>
         </Typography>
             {/* <Typography vartiant="subtitle1" style={{lineHeight:'1.5em', marginTop:'20px'}}>
                 InfoCard

@@ -12,9 +12,10 @@
 .list::-webkit-scrollbar-thumb {
   background-color: #1976d2 !important;;
   outline: 1px solid slategrey;
+  border-radius: 3px;
 }
 .avatarIncome{
-    background:  #1976d2 !important;
+    background:  #14915f !important;
     transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .avatarExpense{

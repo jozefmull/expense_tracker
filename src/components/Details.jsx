@@ -6,6 +6,10 @@ import useTransactions from '../useTransactions'
 import {numberWithCommas} from '../utils/formatNumber'
 import {Chart, registerables } from 'chart.js'
 
+import PaidIcon from '@mui/icons-material/Paid';
+import MoneyOff from '@mui/icons-material/MoneyOff';
+import EuroOutlinedIcon from '@mui/icons-material/EuroOutlined';
+
 import styles from '../css/Details.module.css'
 
 const Details = ({title}) => {
@@ -24,8 +28,8 @@ const Details = ({title}) => {
   return (
     <Box className={title === 'Income' ? `${styles.income} ${styles.details}` : `${styles.expense} ${styles.details}`}>
       <Box>
-        <Typography variant="h5">{title}</Typography>
-        <Typography variant="h6">{numberWithCommas(total)} €</Typography>
+        <Typography variant="h6">{title !== 'Income' ? (<MoneyOff/>) : (<PaidIcon/>)}{title}</Typography>
+        <Typography variant="h5">{numberWithCommas(total)} <EuroOutlinedIcon/></Typography>
       </Box>
         {total !== 0 ? (
           <Doughnut data={chartData} options={Options} height={"100%"}/>

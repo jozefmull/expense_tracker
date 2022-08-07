@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 5px !important;
-    min-width: 300px;
+    min-width: 275px;
     flex-grow: 1;
     transition: all 725ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -16,6 +16,10 @@
 .details h5,
 .details h6{
     font-weight: 500;
+}
+.details h5{
+    font-weight: 600;
+    margin-left: 4px;
 }
 .details.income h5,
 .details.income h6{
@@ -27,9 +31,20 @@
 }
 .details canvas {
     max-height: 300px !important;
+    margin-bottom: 30px;
 }
 .details p {
     align-self: center;
     color:rgb(209, 75, 75);
     font-weight: 500;
+}
+
+.details h6 svg{
+    position: relative;
+    top: 4px;
+    margin-right: 3px;
+}
+.details h5 svg{
+    position: relative;
+    top: 3px;
 }
