@@ -3,7 +3,7 @@ import {AppReducer} from './AppReducer'
 
 // initial state
 const initialState = {
-    transactions:[],
+    transactions: JSON.parse(localStorage.getItem('transactions')) || [],
     error: null,
     loading: true,
     dataLoaded: false
