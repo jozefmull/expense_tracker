@@ -78,3 +78,15 @@
     color:rgb(209, 75, 75)
 
 }
+
+@media only screen and (max-width: 450px) {
+    .list_wrapper > .clear_all_btn{
+        position: unset !important;
+        top:unset !important;
+        right: unset !important;
+        margin-top: 5px;
+    }
+    .list_wrapper{
+        text-align: right;
+    }
+}

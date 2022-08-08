@@ -71,3 +71,9 @@
     background-color: #fff !important;
     outline: 5px solid #1462af;
 }
+
+@media only screen and (max-width: 450px) {
+  .main_wrap {
+    min-width: 300px !important;
+  }
+}
